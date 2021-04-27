@@ -45,12 +45,16 @@ class RepositoriesService extends Service {
   Stream<Repository> listUserRepositories(String user,
       {String type = 'owner',
       String sort = 'full_name',
-      String direction = 'asc'}) {
+        String direction = 'asc',
+        int perPage = 10,
+        int page = 1}) {
     ArgumentError.checkNotNull(user);
     final params = <String, dynamic>{
       'type': type,
       'sort': sort,
-      'direction': direction
+      'direction': direction,
+      'per_page': perPage,
+      'page' : page
     };
 
     return PaginationHelper(github).objects<Map<String, dynamic>, Repository>(
