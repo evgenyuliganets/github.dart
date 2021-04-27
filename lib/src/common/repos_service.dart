@@ -62,6 +62,7 @@ class RepositoriesService extends Service {
       '/users/$user/repos',
       (i) => Repository.fromJson(i),
       params: params,
+      pages: page,
     );
   }
 
