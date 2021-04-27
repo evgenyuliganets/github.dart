@@ -1,4 +1,4 @@
-name: github
+name: mygithub
 version: 8.1.0
 description: A high-level GitHub API Client Library that uses Github's v3 API
 homepage: https://github.com/SpinlockLabs/github.dart
